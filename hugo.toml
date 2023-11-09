@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://apps.crsu.org.uk/'
 title = 'CRSU Apps'
 theme = 'hugo-book'
 enableEmoji = true
