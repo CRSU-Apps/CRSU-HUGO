@@ -17,7 +17,7 @@ disableHugoGeneratorInject = true
 enableRobotsTXT = true
 #enableGitInfo = true
 enableEmoji = true
-sectionPagesMenu = "main"
+#sectionPagesMenu = "main"
 #googleAnalytics = "UA-1511XXXX-X"
 
 [markup.goldmark.renderer]
@@ -80,14 +80,14 @@ unsafe= true
     title = "Made with ❤️ by the Hugo Bootstrap Theme team"
   [[menus.social]]
     name = "GitHub"
-    pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-github'><use href='/hugo-bootstrap-theme/images/feather/feather-sprite.svg#github'/></svg>"
+    pre = "<span class='fa-brands fa-github'></span>"
     url = "https://github.com/CRSU-Apps/"
     weight = 10
     title = "Visit our GitHub Organisation"
 
   [[menus.social]]
     name = "Twitter"
-    pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-twitter'><use href='/hugo-bootstrap-theme/images/feather/feather-sprite.svg#twitter'/></svg>"
-    url = "https://twitter.com/ESG_CRSU/"
+    pre = "<span class='fa-brands fa-x-twitter'></span>"
+    url = "https://twitter.com/CRSU_News/"
     weight = 20
-    title = "Follow us on Twitter"
+    title = "Follow us on X"
