@@ -1,86 +1,93 @@
-baseURL = 'https://apps.crsu.org.uk/'
-title = 'CRSU Apps'
-theme = 'hugo-book'
-enableEmoji = true
-BookFavicon = "favicon.svg"
+baseURL = 'https://apps.crsu.org.uk'
+title = "CRSU Apps"
+author = "Ryan J Field"
+copyright = "CRSU 2024"
 
+timeZone = 'Europe/London'
 
-# Book configuration
+# Multilingual
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+theme = "hugo-bootstrap-theme"
+themesdir = "themes"
+
 disablePathToLower = true
-enableGitInfo = true
-pygmentsUseClasses = true
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+#enableGitInfo = true
+enableEmoji = true
+sectionPagesMenu = "main"
+#googleAnalytics = "UA-1511XXXX-X"
 
-# Needed for mermaid/katex shortcodes
-[markup]
 [markup.goldmark.renderer]
-  unsafe = true
-
-[markup.tableOfContents]
-  startLevel = 1
+unsafe= true
 
 [params]
-  # (Optional, default true) Controls table of contents visibility on right side of pages.
-  # Start and end levels can be controlled with markup.tableOfContents setting.
-  # You can also specify this parameter per page in front matter.
-  BookToC = false
+  # Site Params
 
-  # (Optional, default none) Set the path to a logo for the book. If the logo is
-  # /static/logo.png then the path would be logo.png
-  # BookLogo = 'logo.png'
+  # Open Graph, Twitter Cards and schema.org Thing and Article (in posts)
+  # https://gohugo.io/templates/internal/#open-graph
+  # https://gohugo.io/templates/internal/#twitter-cards
+  # https://schema.org/Thing
+  # https://schema.org/Article
+  description = "The CRSU provides apps for meta-analysis"
+  images = ['images/logo.svg','images/site-feature-image.png']
+  #mainMenuLogo = "images/logo.svg"
 
-  # (Optional, default none) Set leaf bundle to render as side menu
-  # When not specified file structure and weights will be used
-  # BookMenuBundle = '/menu'
+  # For favicons
+  ## Chrome Browser
+  themeColor = "#fff"
 
-  # (Optional, default docs) Specify root page to render child pages as menu.
-  # Page is resoled by .GetPage function: https://gohugo.io/functions/getpage/
-  # For backward compatibility you can set '*' to render all sections to menu. Acts same as '/'
-  BookSection = 'docs'
+  [params.options]
+    bootStrapJs = true
+    breadCrumb = false
+    listCategoryFilter = false
+    listTagFilter = false
 
-  # Set source repository location.
-  # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/FAIRDataPipeline/FDP_hugo'
+[menus]
+  [[menus.main]]
+    name = "MetaPairwise"
+    url = "MetaPairwise"
+    weight = 10
+  [[menus.main]]
+    name = "MetaInsight"
+    url = "MetaInsight"
+    weight = 20
+    title = "Made with ❤️ by the Hugo Bootstrap Theme team"
+  [[menus.main]]
+    name = "MetaInsightCOVID"
+    url = "MetaInsightCOVID"
+    weight = 30
+  [[menus.main]]
+    name = "DTA-Primer"
+    url = "DTA-Primer"
+    weight = 40
+    title = "Made with ❤️ by the Hugo Bootstrap Theme team"
+  [[menus.main]]
+    name = "MetaDTA"
+    url = "MetaDTA"
+    weight = 50
+  [[menus.main]]
+    name = "MetaBayesDTA"
+    url = "MetaBayesDTA"
+    weight = 60
+    title = "Made with ❤️ by the Hugo Bootstrap Theme team"
+  [[menus.main]]
+    name = "MetaImpact"
+    url = "MetaImpact"
+    weight = 70
+    title = "Made with ❤️ by the Hugo Bootstrap Theme team"
+  [[menus.social]]
+    name = "GitHub"
+    pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-github'><use href='/hugo-bootstrap-theme/images/feather/feather-sprite.svg#github'/></svg>"
+    url = "https://github.com/CRSU-Apps/"
+    weight = 10
+    title = "Visit our GitHub Organisation"
 
-  # Enable "Edit this page" links for 'doc' page type.
-  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
-  # Edit path must point to root directory of repo.
-  #BookEditPath = 'tree/master/content'
-
-  # Configure the date format used on the pages
-  # - In git information
-  # - In blog posts
-  BookDateFormat = 'January 2, 2006'
-
-  # (Optional, default true) Enables search function with flexsearch,
-  # Index is built on fly, therefore it might slowdown your website.
-  # Configuration for indexing can be adjusted in i18n folder per language.
-  BookSearch = false
-
-  SearchEnabled = true
-
-  # (Optional, default true) Enables comments template on pages
-  # By default partals/docs/comments.html includes Disqus template
-  # See https://gohugo.io/content-management/comments/#configure-disqus
-  # Can be overwritten by same param in page frontmatter
-  BookComments = true
-
-  # /!\ This is an experimental feature, might be removed or changed at any time
-  # (Optional, experimental, default false) Enables portable links and link checks in markdown pages.
-  # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
-  # Theme will print warning if page referenced in markdown does not exists.
-  BookPortableLinks = true
-
-  # /!\ This is an experimental feature, might be removed or changed at any time
-  # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
-  BookServiceWorker = true
- 
-  # To change the fenced code block theme. 
-  # 1. Put this in config.toml: 
-  # pygmentsUseClasses = true
-  # 2. Run this:
-  # hugo gen chromastyles --style=arduino > syntax.css 
-  # 3. Copy the css into a new stylesheet, themes/hugo-book/assets/_scriptstyle.scss
-  # 4. Add an import to the new stylesheet in _custom.scss:
-  # @import "scriptstyle";
-
-  BookLogo = "logo.png"
+  [[menus.social]]
+    name = "Twitter"
+    pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-twitter'><use href='/hugo-bootstrap-theme/images/feather/feather-sprite.svg#twitter'/></svg>"
+    url = "https://twitter.com/ESG_CRSU/"
+    weight = 20
+    title = "Follow us on Twitter"

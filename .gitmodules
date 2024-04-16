@@ -1,0 +1,3 @@
+[submodule "themes/hugo-bootstap-theme"]
+	path = themes/hugo-bootstap-theme
+	url = https://github.com/CRSU-Apps/hugo-bootstrap-theme
